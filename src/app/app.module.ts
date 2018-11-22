@@ -38,6 +38,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CardsComponent } from './cards/cards.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import { FileService } from './file.service';
 
   @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { CardsComponent } from './cards/cards.component';
     AnimateComponent,
     LoginPanelComponent,
     SignUpComponent,
-    CardsComponent
+    CardsComponent,
+    FileUploadComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,8 @@ import { CardsComponent } from './cards/cards.component';
     DataService,
     AnimateService,
     UserService,
-    CookieService
+    CookieService,
+    FileService
   ],
   bootstrap: [AppComponent]
 })

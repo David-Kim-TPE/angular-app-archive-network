@@ -12,11 +12,12 @@
  * limitations under the License.
  */
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ArchiveService } from './Archive.service';
 import { UserService } from '../user.service';
 import 'rxjs/add/operator/toPromise';
+import { FileUploadComponent } from '../file-upload/file-upload.component';
 
 @Component({
   selector: 'app-archive',
@@ -25,6 +26,9 @@ import 'rxjs/add/operator/toPromise';
   providers: [ArchiveService, UserService]
 })
 export class ArchiveComponent implements OnInit {
+
+  @ViewChild(FileUploadComponent)
+  private fileUpload: FileUploadComponent;
 
   myForm: FormGroup;
 
@@ -295,6 +299,7 @@ export class ArchiveComponent implements OnInit {
       'transactionId': null,
       'timestamp': null
     });
+    this.fileUpload.clearFile();
   }
 
 
@@ -342,5 +347,9 @@ export class ArchiveComponent implements OnInit {
     this.serviceUser.getCurrentUser().then(creator => {
       this.myForm.setValue(ars[i - 1]);
     });
+  }
+
+  onUploaded(fileUrl: string): void {
+    this.End_File_URL.setValue(fileUrl);
   }
 }

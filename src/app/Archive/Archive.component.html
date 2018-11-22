@@ -81,13 +81,16 @@
             
           
 
-            
+          
+
               <div class="form-group text-left">
                 <label for="End_File_URL">End_File_URL</label>
-                
-                  <input formControlName="End_File_URL" type="text" class="form-control">
-                
+    
+                <input formControlName="End_File_URL" type="text" class="form-control">
+                <app-file-upload (uploaded)="onUploaded($event)" #fileUpload></app-file-upload>
+    
               </div>
+    
             
           
             

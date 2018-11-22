@@ -15,6 +15,7 @@
     width: 100%;
     padding-left: 72px;
     padding-right: 72px;
+    overflow: hidden;
 }
 
 .btn-primary {
@@ -168,6 +169,10 @@ label {
 
 .ankor-default {
     cursor: pointer;
+}
+
+.table-wrap {
+    overflow: scroll;
 }
 
 /***.asset-properties:hover, .asset-properties:hover span{  

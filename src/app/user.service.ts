@@ -17,6 +17,7 @@ export class UserService {
   currentUser: string;
   cardExists: boolean;
   currentUserName: string;
+  currentUserRole: string;
   cards: any;
 
   constructor(
@@ -120,6 +121,7 @@ export class UserService {
         this.currentUser = currentUser;
         console.log(currentUser.split('#'));
         this.currentUserName = currentUser.split('#').pop();
+        this.currentUserRole = currentUser.split('#')[0].split('.').pop();
         return currentUser;
       })
       .catch((error: HttpErrorResponse) => this.handleError(error));
