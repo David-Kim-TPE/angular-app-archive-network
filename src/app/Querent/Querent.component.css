@@ -15,6 +15,11 @@
     width: 100%;
     padding-left: 72px;
     padding-right: 72px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    height: 35px;
 }
 
 .btn-primary {

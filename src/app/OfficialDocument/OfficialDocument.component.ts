@@ -17,6 +17,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { OfficialDocumentService } from './OfficialDocument.service';
 import { UserService } from '../user.service';
 import 'rxjs/add/operator/toPromise';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-officialdocument',
@@ -32,6 +33,8 @@ export class OfficialDocumentComponent implements OnInit {
   private asset;
   private currentId;
   private errorMessage;
+  private tableWidth;
+  private tableHeight;
 
   Issue_No = new FormControl('', Validators.required);
   Issue_Date = new FormControl('', Validators.required);
@@ -625,6 +628,7 @@ export class OfficialDocumentComponent implements OnInit {
 
   onClickDefault(i: number): void {
     this.serviceUser.getCurrentUser().then(creator => {
+      const creatorName = creator.split('#').pop();
       const ods = [
         {
           'Issue_No': '桃稅蘆1064413137',
@@ -653,7 +657,7 @@ export class OfficialDocumentComponent implements OnInit {
           'Agency_Id': 'TP',
           'Transfer_Agency_Id': '103001',
           'Transfer_Date': '1071024',
-          'Creator': creator,
+          'Creator': creatorName,
           'End_File_Submiter': null,
           'End_File_Printer': null,
           'File_URL': null,
@@ -686,7 +690,7 @@ export class OfficialDocumentComponent implements OnInit {
           'Agency_Id': 'TC',
           'Transfer_Agency_Id': '103002',
           'Transfer_Date': '1071023',
-          'Creator': creator,
+          'Creator': creatorName,
           'End_File_Submiter': null,
           'End_File_Printer': null,
           'File_URL': null,
@@ -719,7 +723,7 @@ export class OfficialDocumentComponent implements OnInit {
           'Agency_Id': 'SC',
           'Transfer_Agency_Id': '103003',
           'Transfer_Date': '1071022',
-          'Creator': creator,
+          'Creator': creatorName,
           'End_File_Submiter': null,
           'End_File_Printer': null,
           'File_URL': null,
@@ -752,7 +756,7 @@ export class OfficialDocumentComponent implements OnInit {
           'Agency_Id': 'CY',
           'Transfer_Agency_Id': '103004',
           'Transfer_Date': '1071021',
-          'Creator': creator,
+          'Creator': creatorName,
           'End_File_Submiter': null,
           'End_File_Printer': null,
           'File_URL': null,
@@ -762,6 +766,25 @@ export class OfficialDocumentComponent implements OnInit {
 
       this.myForm.setValue(ods[i - 1]);
     });
+  }
+
+  fullscreen(): void {
+    console.log('fullscreen()');
+    $('#table-container').toggleClass('fullscreen');
+    $('#table-container-close').toggleClass('hidden');
+    console.log($('#table-container')[0].style);
+    if (this.tableWidth || this.tableHeight) {
+      $('#table-container').css('width', this.tableWidth);
+      $('#table-container').css('width', this.tableHeight);
+      this.tableWidth = '';
+      this.tableHeight = '';
+    } else {
+      this.tableWidth = $('#table-container').css.width;
+      this.tableHeight = $('#table-container').css.height;
+      $('#table-container').css('width', '');
+      $('#table-container').css('height', '');
+    }
+
   }
 
 }

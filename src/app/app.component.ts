@@ -12,16 +12,28 @@
  * limitations under the License.
  */
 
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import $ from 'jquery';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'app works!';
+
+
+  constructor(public serviceUser: UserService) {
+  }
+
+  ngOnInit() {
+    this.serviceUser.checkAccessToken();
+    if (this.serviceUser.accessTokenExists) {
+      this.serviceUser.checkWallet();
+    }
+  }
 
   ngAfterViewInit() {
     $('.nav a').on('click', function(){

@@ -43,8 +43,6 @@ export class ArchiveComponent implements OnInit {
   BatchNo = new FormControl('', Validators.required);
   BatchYear = new FormControl('', Validators.required);
   End_File_URL = new FormControl('', Validators.required);
-  transactionId = new FormControl('', Validators.required);
-  timestamp = new FormControl('', Validators.required);
 
 
   constructor(private serviceArchive: ArchiveService, private serviceUser: UserService, fb: FormBuilder) {
@@ -54,9 +52,7 @@ export class ArchiveComponent implements OnInit {
       End_File_Date: this.End_File_Date,
       BatchNo: this.BatchNo,
       BatchYear: this.BatchYear,
-      End_File_URL: this.End_File_URL,
-      transactionId: this.transactionId,
-      timestamp: this.timestamp
+      End_File_URL: this.End_File_URL
     });
   };
 
@@ -119,9 +115,7 @@ export class ArchiveComponent implements OnInit {
       'End_File_Date': this.End_File_Date.value,
       'BatchNo': this.BatchNo.value,
       'BatchYear': this.BatchYear.value,
-      'End_File_URL': this.End_File_URL.value,
-      'transactionId': this.transactionId.value,
-      'timestamp': this.timestamp.value
+      'End_File_URL': this.End_File_URL.value
     };
 
     this.myForm.setValue({
@@ -130,9 +124,7 @@ export class ArchiveComponent implements OnInit {
       'End_File_Date': null,
       'BatchNo': null,
       'BatchYear': null,
-      'End_File_URL': null,
-      'transactionId': null,
-      'timestamp': null
+      'End_File_URL': null
     });
 
     return this.serviceArchive.addTransaction(this.Transaction)
@@ -145,9 +137,7 @@ export class ArchiveComponent implements OnInit {
           'End_File_Date': null,
           'BatchNo': null,
           'BatchYear': null,
-          'End_File_URL': null,
-          'transactionId': null,
-          'timestamp': null
+          'End_File_URL': null
         });
       })
       .catch((error) => {
@@ -167,8 +157,7 @@ export class ArchiveComponent implements OnInit {
       'End_File_Date': this.End_File_Date.value,
       'BatchNo': this.BatchNo.value,
       'BatchYear': this.BatchYear.value,
-      'End_File_URL': this.End_File_URL.value,
-      'timestamp': this.timestamp.value
+      'End_File_URL': this.End_File_URL.value
     };
 
     return this.serviceArchive.updateTransaction(form.get('transactionId').value, this.Transaction)
@@ -221,9 +210,7 @@ export class ArchiveComponent implements OnInit {
           'End_File_Date': null,
           'BatchNo': null,
           'BatchYear': null,
-          'End_File_URL': null,
-          'transactionId': null,
-          'timestamp': null
+          'End_File_URL': null
         };
 
         if (result.od) {
@@ -262,18 +249,6 @@ export class ArchiveComponent implements OnInit {
           formObject.End_File_URL = null;
         }
 
-        if (result.transactionId) {
-          formObject.transactionId = result.transactionId;
-        } else {
-          formObject.transactionId = null;
-        }
-
-        if (result.timestamp) {
-          formObject.timestamp = result.timestamp;
-        } else {
-          formObject.timestamp = null;
-        }
-
         this.myForm.setValue(formObject);
 
       })
@@ -295,9 +270,7 @@ export class ArchiveComponent implements OnInit {
       'End_File_Date': null,
       'BatchNo': null,
       'BatchYear': null,
-      'End_File_URL': null,
-      'transactionId': null,
-      'timestamp': null
+      'End_File_URL': null
     });
     this.fileUpload.clearFile();
   }
@@ -305,48 +278,40 @@ export class ArchiveComponent implements OnInit {
 
   onClickDefault(i: number): void {
     const ars = [{
-      'od': 'resource:org.example.archive.OfficialDocument#桃稅蘆1064413137',
+      'od': '桃稅蘆1064413137',
       'End_File_No': 'TY08020302011070021536',
       'End_File_Date': '10710251246',
       'BatchNo': '36',
       'BatchYear': '102',
-      'End_File_URL': null,
-      'transactionId': null,
-      'timestamp': null
+      'End_File_URL': null
     },
     {
-      'od': 'resource:org.example.archive.OfficialDocument#桃稅法1063702754',
+      'od': '桃稅1063702754',
       'End_File_No': 'TY08020302011070021536',
       'End_File_Date': '10710251246',
       'BatchNo': '36',
       'BatchYear': '102',
-      'End_File_URL': null,
-      'transactionId': null,
-      'timestamp': null
+      'End_File_URL': null
     },
     {
-      'od': 'resource:org.example.archive.OfficialDocument#桃稅蘆1064413368',
+      'od': '桃稅蘆1064413368',
       'End_File_No': 'TY08020302011070021536',
       'End_File_Date': '10710251246',
       'BatchNo': '36',
       'BatchYear': '102',
-      'End_File_URL': null,
-      'transactionId': null,
-      'timestamp': null
+      'End_File_URL': null
     },
     {
-      'od': 'resource:org.example.archive.OfficialDocument#桃稅蘆1064413642',
+      'od': '桃稅蘆1064413642',
       'End_File_No': 'TY08020302011070040722',
       'End_File_Date': '10710252038',
       'BatchNo': '12',
       'BatchYear': '105',
-      'End_File_URL': null,
-      'transactionId': null,
-      'timestamp': null
+      'End_File_URL': null
     }];
-    this.serviceUser.getCurrentUser().then(creator => {
+
       this.myForm.setValue(ars[i - 1]);
-    });
+
   }
 
   onUploaded(fileUrl: string): void {

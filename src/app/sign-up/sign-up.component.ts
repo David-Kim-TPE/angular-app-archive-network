@@ -18,6 +18,7 @@ import {
 export class SignUpComponent implements OnInit {
   private signUpInProgress = false;
   form: FormGroup;
+  errorMessage = '';
 
   private signUp = {
     id: '',
@@ -43,9 +44,14 @@ export class SignUpComponent implements OnInit {
 
   onSignUp() {
     this.signUpInProgress = true;
-    return this.userService.signUp(this.signUp, () => {
+    return this.userService.signUp(this.signUp, error => {
       this.signUpInProgress = false;
-      return this.router.navigate(['Cards']);
+      console.log({error});
+      if (!error) {
+        return this.router.navigate(['Cards']);
+      } else {
+        return this.errorMessage = error.statusText;
+      }
     });
   }
 }

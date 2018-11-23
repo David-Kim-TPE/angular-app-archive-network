@@ -54,4 +54,9 @@
     justify-content: flex-end;
     align-items: center;
     background-color: darkseagreen;
+    background-image: url('../../assets/images/Acer-Brand-logo.png');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: -34px;
+    background-size: 175px;
 }

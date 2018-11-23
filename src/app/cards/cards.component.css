@@ -1,4 +1,4 @@
-.list-of-cards{
+.list-of-cards {
     display: flex;
     justify-content: left;
     flex-direction: row;
@@ -14,7 +14,7 @@
     border: 1px solid #ddd;
     margin: 10px;
     padding: 10px;
-    box-shadow: 5px 8px 5px rgb(0,0,0,0.2);
+    box-shadow: 5px 8px 5px rgb(0, 0, 0, 0.2);
     height: 250px;
     min-width: 220px;
 }
@@ -26,7 +26,7 @@
 
 .list-of-cards__card--wild {
     background-color: #DDD;
-    border: 0px;   
+    border: 0px;
 }
 
 .list-of-cards__import {
@@ -40,7 +40,7 @@
     display: flex;
     margin: 50px;
     background-color: #ddd;
-    text-align:center;
+    text-align: center;
 }
 
 .list-of-cards__import:hover {
@@ -63,11 +63,9 @@
     color: #999;
 }
 
-
 .list-of-cards__card--default {
     border-color: orange;
 }
-
 
 .card__name {
     font-size: 16px;
@@ -86,4 +84,12 @@
 
 .card__status {
     color: darkgray;
+}
+
+.container {
+    margin-left: 72px;
+    margin-right: 32px;
+    background-color: #F4F4F4;
+    border-radius: 5px;
+    margin-bottom: 30px;
 }

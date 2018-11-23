@@ -84,9 +84,12 @@ export class UserService {
       })
       .then(res => {
         console.log('then 4');
-        return callback();
+        return callback(null);
       })
-      .catch((error: HttpErrorResponse) => this.handleError(error));
+      .catch((error: HttpErrorResponse) => { 
+        this.handleError(error);
+        return callback(error);
+      });
   }
 
   importCard(cardData: Blob) {

@@ -17,558 +17,414 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="addAssetModalLabel">建立資產</h4>
-          <ul class="default-list">
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(1)">預設1</a></li>
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(2)">預設2</a></li>
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(3)">預設3</a></li>
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(4)">預設4</a></li>
-          </ul>
-          <p class="modal-intro">輸入以下必要的欄位</p>
+        <ul class="default-list">
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(1)">預設1</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(2)">預設2</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(3)">預設3</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(4)">預設4</a></li>
+        </ul>
+        <p class="modal-intro">輸入以下必要的欄位</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
 
 
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Issue_No">發文字號</label>
-                
-                  <input formControlName="Issue_No" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Issue_Date">發文日期</label>
-                
-                  <input formControlName="Issue_Date" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <label for="Class_Type">案件類別</label>
-              <div class="checkbox">
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Class_Type"
-                      
-                      name="Class_Type"
-                      value="A"
-                      type="radio"
-                      
-                    />
-                    A
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Class_Type"
-                      
-                      name="Class_Type"
-                      value="B"
-                      type="radio"
-                      
-                    />
-                    B
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Class_Type"
-                      
-                      name="Class_Type"
-                      value="C"
-                      type="radio"
-                      
-                    />
-                    C
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Class_Type"
-                      
-                      name="Class_Type"
-                      value="D"
-                      type="radio"
-                      
-                    />
-                    D
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Class_Type"
-                      
-                      name="Class_Type"
-                      value="E"
-                      type="radio"
-                      
-                    />
-                    E
-                  </label>
-                
-              </div>
-            
-          
+          <div class="form-group text-left">
+            <label for="Issue_No">發文字號</label>
 
-            
-              <div class="form-group text-left">
-                <label for="Send_Class_ID">移送案號</label>
-                
-                  <input formControlName="Send_Class_ID" type="text" class="form-control">
-                
-              </div>
-            
-          
+            <input formControlName="Issue_No" type="text" class="form-control">
 
-            
-              <div class="form-group text-left">
-                <label for="Duty_Name">義務人姓名</label>
-                
-                  <input formControlName="Duty_Name" type="text" class="form-control">
-                
-              </div>
-            
-          
+          </div>
 
-            
-              <div class="form-group text-left">
-                <label for="Duty_Birthday">出生日期（義務人）</label>
-                
-                  <input formControlName="Duty_Birthday" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Duty_ZipCode">戶籍郵遞區號（義務人）</label>
-                
-                  <input formControlName="Duty_ZipCode" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Duty_Addr">戶籍地址（義務人）</label>
-                
-                  <input formControlName="Duty_Addr" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Legal_Case_ID">案由代碼</label>
-                
-                  <input formControlName="Legal_Case_ID" type="text" class="form-control">
-                
-              </div>
-            
-          
+          <div class="form-group text-left">
+            <label for="Issue_Date">發文日期</label>
 
-            
-              <div class="form-group text-left">
-                <label for="Pay_Amt">應納金額</label>
-                
-                  <input formControlName="Pay_Amt" type="number" class="form-control">
-                
-              </div>
-            
-          
+            <input formControlName="Issue_Date" type="text" class="form-control">
 
-            
-              <div class="form-group text-left">
-                <label for="Protect_Exit_Org">保全措施（已限制出境）</label>
-                
-                  <input formControlName="Protect_Exit_Org" type="checkbox" class="form-control">
-                
-              </div>
-            
-          
+          </div>
 
-            
-              <div class="form-group text-left">
-                <label for="Protect_Punish_Org">保全措施（已禁止處分）</label>
-                
-                  <input formControlName="Protect_Punish_Org" type="checkbox" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Protect_Guar_Org">保全措施（已提供擔保）</label>
-                
-                  <input formControlName="Protect_Guar_Org" type="checkbox" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Protect_Sei_Org">保全措施（已假扣押）</label>
-                
-                  <input formControlName="Protect_Sei_Org" type="checkbox" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Protect_Closed_Org">保全措施（已勒令停業）</label>
-                
-                  <input formControlName="Protect_Closed_Org" type="checkbox" class="form-control">
-                
-              </div>
-            
-          
+          <label for="Class_Type">案件類別</label>
+          <div class="checkbox">
 
-            
-              <div class="form-group text-left">
-                <label for="Pay_Period_Due_Date">繳納期間屆滿日</label>
-                
-                  <input formControlName="Pay_Period_Due_Date" type="text" class="form-control">
-                
-              </div>
-            
-          
+            <label>
+              <input formControlName="Class_Type" name="Class_Type" value="A" type="radio" />
+              A
+            </label>
 
-            
-              <div class="form-group text-left">
-                <label for="Is_Punishment">是否行政處分確定</label>
-                
-                  <input formControlName="Is_Punishment" type="checkbox" class="form-control">
-                
-              </div>
-            
-          
+            <label>
+              <input formControlName="Class_Type" name="Class_Type" value="B" type="radio" />
+              B
+            </label>
 
-            
-              <div class="form-group text-left">
-                <label for="End_File_No">歸檔檔號</label>
-                
-                  <input formControlName="End_File_No" type="text" class="form-control">
-                
-              </div>
-            
-          
+            <label>
+              <input formControlName="Class_Type" name="Class_Type" value="C" type="radio" />
+              C
+            </label>
 
-            
-              <div class="form-group text-left">
-                <label for="End_File_Date">歸檔日期</label>
-                
-                  <input formControlName="End_File_Date" type="text" class="form-control">
-                
-              </div>
-            
-          
+            <label>
+              <input formControlName="Class_Type" name="Class_Type" value="D" type="radio" />
+              D
+            </label>
 
-            
-              <div class="form-group text-left">
-                <label for="BatchNo">歸檔批號-流水號</label>
-                
-                  <input formControlName="BatchNo" type="text" class="form-control">
-                
-              </div>
-            
-          
+            <label>
+              <input formControlName="Class_Type" name="Class_Type" value="E" type="radio" />
+              E
+            </label>
 
-            
-              <div class="form-group text-left">
-                <label for="BatchYear">歸檔批號-年度</label>
-                
-                  <input formControlName="BatchYear" type="text" class="form-control">
-                
-              </div>
-            
-          
+          </div>
 
-            
-              <div class="form-group text-left">
-                <label for="End_Print_Date">歸檔列印日期</label>
-                
-                  <input formControlName="End_Print_Date" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="End_Valid_Date">歸檔審核日期</label>
-                
-                  <input formControlName="End_Valid_Date" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <label for="Agency_Id">行政執行分屬代碼前2碼</label>
-              <div class="checkbox">
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="TP"
-                      type="radio"
-                      
-                    />
-                    TP
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="SL"
-                      type="radio"
-                      
-                    />
-                    SL
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="PC"
-                      type="radio"
-                      
-                    />
-                    PC
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="TY"
-                      type="radio"
-                      
-                    />
-                    TY
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="SC"
-                      type="radio"
-                      
-                    />
-                    SC
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="TC"
-                      type="radio"
-                      
-                    />
-                    TC
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="CH"
-                      type="radio"
-                      
-                    />
-                    CH
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="CY"
-                      type="radio"
-                      
-                    />
-                    CY
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="TN"
-                      type="radio"
-                      
-                    />
-                    TN
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="KS"
-                      type="radio"
-                      
-                    />
-                    KS
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="PT"
-                      type="radio"
-                      
-                    />
-                    PT
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="HL"
-                      type="radio"
-                      
-                    />
-                    HL
-                  </label>
-                
-                  <label>
-                    <input
-                      
-                        formControlName="Agency_Id"
-                      
-                      name="Agency_Id"
-                      value="IL"
-                      type="radio"
-                      
-                    />
-                    IL
-                  </label>
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="Transfer_Agency_Id">移送機關代號</label>
-                
-                  <input formControlName="Transfer_Agency_Id" type="text" class="form-control">
-                
-              </div>
-            
-          
+          <div class="form-group text-left">
+            <label for="Send_Class_ID">移送案號</label>
 
-            
-              <div class="form-group text-left">
-                <label for="Transfer_Date">移送日期</label>
-                
-                  <input formControlName="Transfer_Date" type="text" class="form-control">
-                
-              </div>
-            
-              <div class="form-group text-left">
-                <label for="Creator">建檔人</label>
-                
-                    <textarea formControlName="Creator" class="form-control" rows="3"></textarea>
-                
-              </div>
+            <input formControlName="Send_Class_ID" type="text" class="form-control">
 
-            
-              <div class="form-group text-left">
-                <label for="End_File_Submiter">歸檔人</label>
-                
-                    <textarea formControlName="End_File_Submiter" class="form-control" rows="3"></textarea>
-                
-              </div>
+          </div>
 
-              
 
-            
-              <div class="form-group text-left">
-                <label for="End_File_Printer">歸檔列印人</label>
-                
-                    <textarea formControlName="End_File_Printer" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="File_URL">檔案暫存路徑</label>
-                
-                  <input formControlName="File_URL" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="End_File_URL">歸檔檔案路徑</label>
-                
-                  <input formControlName="End_File_URL" type="text" class="form-control">
-                
-              </div>
-            
-          
+          <div class="form-group text-left">
+            <label for="Duty_Name">義務人姓名</label>
+
+            <input formControlName="Duty_Name" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Duty_Birthday">出生日期（義務人）</label>
+
+            <input formControlName="Duty_Birthday" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Duty_ZipCode">戶籍郵遞區號（義務人）</label>
+
+            <input formControlName="Duty_ZipCode" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Duty_Addr">戶籍地址（義務人）</label>
+
+            <input formControlName="Duty_Addr" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Legal_Case_ID">案由代碼</label>
+
+            <input formControlName="Legal_Case_ID" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Pay_Amt">應納金額</label>
+
+            <input formControlName="Pay_Amt" type="number" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Protect_Exit_Org">保全措施（已限制出境）</label>
+
+            <input formControlName="Protect_Exit_Org" type="checkbox" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Protect_Punish_Org">保全措施（已禁止處分）</label>
+
+            <input formControlName="Protect_Punish_Org" type="checkbox" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Protect_Guar_Org">保全措施（已提供擔保）</label>
+
+            <input formControlName="Protect_Guar_Org" type="checkbox" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Protect_Sei_Org">保全措施（已假扣押）</label>
+
+            <input formControlName="Protect_Sei_Org" type="checkbox" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Protect_Closed_Org">保全措施（已勒令停業）</label>
+
+            <input formControlName="Protect_Closed_Org" type="checkbox" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Pay_Period_Due_Date">繳納期間屆滿日</label>
+
+            <input formControlName="Pay_Period_Due_Date" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Is_Punishment">是否行政處分確定</label>
+
+            <input formControlName="Is_Punishment" type="checkbox" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="End_File_No">歸檔檔號</label>
+
+            <input formControlName="End_File_No" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="End_File_Date">歸檔日期</label>
+
+            <input formControlName="End_File_Date" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="BatchNo">歸檔批號-流水號</label>
+
+            <input formControlName="BatchNo" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="BatchYear">歸檔批號-年度</label>
+
+            <input formControlName="BatchYear" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="End_Print_Date">歸檔列印日期</label>
+
+            <input formControlName="End_Print_Date" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="End_Valid_Date">歸檔審核日期</label>
+
+            <input formControlName="End_Valid_Date" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <label for="Agency_Id">行政執行分屬代碼前2碼</label>
+          <div class="checkbox">
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="TP" type="radio" />
+              TP
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="SL" type="radio" />
+              SL
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="PC" type="radio" />
+              PC
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="TY" type="radio" />
+              TY
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="SC" type="radio" />
+              SC
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="TC" type="radio" />
+              TC
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="CH" type="radio" />
+              CH
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="CY" type="radio" />
+              CY
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="TN" type="radio" />
+              TN
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="KS" type="radio" />
+              KS
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="PT" type="radio" />
+              PT
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="HL" type="radio" />
+              HL
+            </label>
+
+            <label>
+              <input formControlName="Agency_Id" name="Agency_Id" value="IL" type="radio" />
+              IL
+            </label>
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Transfer_Agency_Id">移送機關代號</label>
+
+            <input formControlName="Transfer_Agency_Id" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="Transfer_Date">移送日期</label>
+
+            <input formControlName="Transfer_Date" type="text" class="form-control">
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Creator">建檔人</label>
+
+            <textarea formControlName="Creator" class="form-control" rows="3"></textarea>
+
+          </div>
+
+
+          <div class="form-group text-left">
+            <label for="End_File_Submiter">歸檔人</label>
+
+            <textarea formControlName="End_File_Submiter" class="form-control" rows="3"></textarea>
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="End_File_Printer">歸檔列印人</label>
+
+            <textarea formControlName="End_File_Printer" class="form-control" rows="3"></textarea>
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="File_URL">檔案暫存路徑</label>
+
+            <input formControlName="File_URL" type="text" class="form-control">
+
+          </div>
+
+
+
+
+          <div class="form-group text-left">
+            <label for="End_File_URL">歸檔檔案路徑</label>
+
+            <input formControlName="End_File_URL" type="text" class="form-control">
+
+          </div>
+
+
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
           <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">確認</button>
 
         </div>
@@ -591,558 +447,396 @@
         <div class="modal-body">
 
 
-          
-            <div class="form-group text-left">
-              <label for="Issue_No">發文字號</label>
-              
-              
-                <input [ngModel]="Issue_No" formControlName="Issue_No" class="form-control" disabled="disabled">  
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Issue_Date">發文日期</label>
-              
-              
-                <input [ngModel]="Issue_Date"formControlName="Issue_Date" type="text" class="form-control">
-              
+          <div class="form-group text-left">
+            <label for="Issue_No">發文字號</label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Class_Type">案件類別</label>
-              
-              
-                
-                  <div class="row">
-                    <div class="col-xs-12 checkbox">
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Class_Type"
-                            [ngModel]="Class_Type"
-                          
-                          name="Class_Type"
-                          value="A"
-                          type="radio"
-                          
-                        />
-                        A
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Class_Type"
-                            [ngModel]="Class_Type"
-                          
-                          name="Class_Type"
-                          value="B"
-                          type="radio"
-                          
-                        />
-                        B
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Class_Type"
-                            [ngModel]="Class_Type"
-                          
-                          name="Class_Type"
-                          value="C"
-                          type="radio"
-                          
-                        />
-                        C
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Class_Type"
-                            [ngModel]="Class_Type"
-                          
-                          name="Class_Type"
-                          value="D"
-                          type="radio"
-                          
-                        />
-                        D
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Class_Type"
-                            [ngModel]="Class_Type"
-                          
-                          name="Class_Type"
-                          value="E"
-                          type="radio"
-                          
-                        />
-                        E
-                      </label>
-                    
-                    </div>
-                  </div>
-                
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Send_Class_ID">移送案號</label>
-              
-              
-                <input [ngModel]="Send_Class_ID"formControlName="Send_Class_ID" type="text" class="form-control">
-              
+            <input [ngModel]="Issue_No" formControlName="Issue_No" class="form-control" disabled="disabled">
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Duty_Name">義務人姓名</label>
-              
-              
-                <input [ngModel]="Duty_Name"formControlName="Duty_Name" type="text" class="form-control">
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Duty_Birthday">出生日期（義務人）</label>
-              
-              
-                <input [ngModel]="Duty_Birthday"formControlName="Duty_Birthday" type="text" class="form-control">
-              
+          </div>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Duty_ZipCode">戶籍郵遞區號（義務人）</label>
-              
-              
-                <input [ngModel]="Duty_ZipCode"formControlName="Duty_ZipCode" type="text" class="form-control">
-              
+          <div class="form-group text-left">
+            <label for="Issue_Date">發文日期</label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Duty_Addr">戶籍地址（義務人）</label>
-              
-              
-                <input [ngModel]="Duty_Addr"formControlName="Duty_Addr" type="text" class="form-control">
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Legal_Case_ID">案由代碼</label>
-              
-              
-                <input [ngModel]="Legal_Case_ID"formControlName="Legal_Case_ID" type="text" class="form-control">
-              
+            <input [ngModel]="Issue_Date" formControlName="Issue_Date" type="text" class="form-control">
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Pay_Amt">應納金額</label>
-              
-              
-                <input [ngModel]="Pay_Amt" formControlName="Pay_Amt" type="number" class="form-control">
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Protect_Exit_Org">保全措施（已限制出境）</label>
-              
-              
-                <input [ngModel]="Protect_Exit_Org" formControlName="Protect_Exit_Org" type="checkbox" class="form-control">
-              
+          </div>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Protect_Punish_Org">保全措施（已禁止處分）</label>
-              
-              
-                <input [ngModel]="Protect_Punish_Org" formControlName="Protect_Punish_Org" type="checkbox" class="form-control">
-              
+          <div class="form-group text-left">
+            <label for="Class_Type">案件類別</label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Protect_Guar_Org">保全措施（已提供擔保）</label>
-              
-              
-                <input [ngModel]="Protect_Guar_Org" formControlName="Protect_Guar_Org" type="checkbox" class="form-control">
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Protect_Sei_Org">保全措施（已假扣押）</label>
-              
-              
-                <input [ngModel]="Protect_Sei_Org" formControlName="Protect_Sei_Org" type="checkbox" class="form-control">
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Protect_Closed_Org">保全措施（已勒令停業）</label>
-              
-              
-                <input [ngModel]="Protect_Closed_Org" formControlName="Protect_Closed_Org" type="checkbox" class="form-control">
-              
+            <div class="row">
+              <div class="col-xs-12 checkbox">
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Pay_Period_Due_Date">繳納期間屆滿日</label>
-              
-              
-                <input [ngModel]="Pay_Period_Due_Date"formControlName="Pay_Period_Due_Date" type="text" class="form-control">
-              
+                <label>
+                  <input formControlName="Class_Type" [ngModel]="Class_Type" name="Class_Type" value="A" type="radio" />
+                  A
+                </label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Is_Punishment">是否行政處分確定</label>
-              
-              
-                <input [ngModel]="Is_Punishment" formControlName="Is_Punishment" type="checkbox" class="form-control">
-              
+                <label>
+                  <input formControlName="Class_Type" [ngModel]="Class_Type" name="Class_Type" value="B" type="radio" />
+                  B
+                </label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="End_File_No">歸檔檔號</label>
-              
-              
-                <input [ngModel]="End_File_No"formControlName="End_File_No" type="text" class="form-control">
-              
+                <label>
+                  <input formControlName="Class_Type" [ngModel]="Class_Type" name="Class_Type" value="C" type="radio" />
+                  C
+                </label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="End_File_Date">歸檔日期</label>
-              
-              
-                <input [ngModel]="End_File_Date"formControlName="End_File_Date" type="text" class="form-control">
-              
+                <label>
+                  <input formControlName="Class_Type" [ngModel]="Class_Type" name="Class_Type" value="D" type="radio" />
+                  D
+                </label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="BatchNo">歸檔批號-流水號</label>
-              
-              
-                <input [ngModel]="BatchNo"formControlName="BatchNo" type="text" class="form-control">
-              
+                <label>
+                  <input formControlName="Class_Type" [ngModel]="Class_Type" name="Class_Type" value="E" type="radio" />
+                  E
+                </label>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="BatchYear">歸檔批號-年度</label>
-              
-              
-                <input [ngModel]="BatchYear"formControlName="BatchYear" type="text" class="form-control">
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="End_Print_Date">歸檔列印日期</label>
-              
-              
-                <input [ngModel]="End_Print_Date"formControlName="End_Print_Date" type="text" class="form-control">
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="End_Valid_Date">歸檔審核日期</label>
-              
-              
-                <input [ngModel]="End_Valid_Date"formControlName="End_Valid_Date" type="text" class="form-control">
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Agency_Id">行政執行分屬代碼前2碼</label>
-              
-              
-                
-                  <div class="row">
-                    <div class="col-xs-12 checkbox">
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="TP"
-                          type="radio"
-                          
-                        />
-                        TP
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="SL"
-                          type="radio"
-                          
-                        />
-                        SL
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="PC"
-                          type="radio"
-                          
-                        />
-                        PC
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="TY"
-                          type="radio"
-                          
-                        />
-                        TY
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="SC"
-                          type="radio"
-                          
-                        />
-                        SC
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="TC"
-                          type="radio"
-                          
-                        />
-                        TC
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="CH"
-                          type="radio"
-                          
-                        />
-                        CH
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="CY"
-                          type="radio"
-                          
-                        />
-                        CY
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="TN"
-                          type="radio"
-                          
-                        />
-                        TN
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="KS"
-                          type="radio"
-                          
-                        />
-                        KS
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="PT"
-                          type="radio"
-                          
-                        />
-                        PT
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="HL"
-                          type="radio"
-                          
-                        />
-                        HL
-                      </label>
-                    
-                      <label>
-                        <input
-                          
-                            formControlName="Agency_Id"
-                            [ngModel]="Agency_Id"
-                          
-                          name="Agency_Id"
-                          value="IL"
-                          type="radio"
-                          
-                        />
-                        IL
-                      </label>
-                    
-                    </div>
-                  </div>
-                
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Transfer_Agency_Id">移送機關代號</label>
-              
-              
-                <input [ngModel]="Transfer_Agency_Id"formControlName="Transfer_Agency_Id" type="text" class="form-control">
-              
-
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="Transfer_Date">移送日期</label>
-              
-              
-                <input [ngModel]="Transfer_Date"formControlName="Transfer_Date" type="text" class="form-control">
-              
-
+              </div>
             </div>
 
-            <div class="form-group text-left">
-              <label for="Creator">建檔人</label>
-              
-              
-                
-                  <textarea [ngModel]="Creator" formControlName="Creator" class="form-control" rows="3"></textarea>
-                
-              
 
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Send_Class_ID">移送案號</label>
+
+
+            <input [ngModel]="Send_Class_ID" formControlName="Send_Class_ID" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Duty_Name">義務人姓名</label>
+
+
+            <input [ngModel]="Duty_Name" formControlName="Duty_Name" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Duty_Birthday">出生日期（義務人）</label>
+
+
+            <input [ngModel]="Duty_Birthday" formControlName="Duty_Birthday" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Duty_ZipCode">戶籍郵遞區號（義務人）</label>
+
+
+            <input [ngModel]="Duty_ZipCode" formControlName="Duty_ZipCode" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Duty_Addr">戶籍地址（義務人）</label>
+
+
+            <input [ngModel]="Duty_Addr" formControlName="Duty_Addr" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Legal_Case_ID">案由代碼</label>
+
+
+            <input [ngModel]="Legal_Case_ID" formControlName="Legal_Case_ID" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Pay_Amt">應納金額</label>
+
+
+            <input [ngModel]="Pay_Amt" formControlName="Pay_Amt" type="number" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Protect_Exit_Org">保全措施（已限制出境）</label>
+
+
+            <input [ngModel]="Protect_Exit_Org" formControlName="Protect_Exit_Org" type="checkbox" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Protect_Punish_Org">保全措施（已禁止處分）</label>
+
+
+            <input [ngModel]="Protect_Punish_Org" formControlName="Protect_Punish_Org" type="checkbox" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Protect_Guar_Org">保全措施（已提供擔保）</label>
+
+
+            <input [ngModel]="Protect_Guar_Org" formControlName="Protect_Guar_Org" type="checkbox" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Protect_Sei_Org">保全措施（已假扣押）</label>
+
+
+            <input [ngModel]="Protect_Sei_Org" formControlName="Protect_Sei_Org" type="checkbox" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Protect_Closed_Org">保全措施（已勒令停業）</label>
+
+
+            <input [ngModel]="Protect_Closed_Org" formControlName="Protect_Closed_Org" type="checkbox" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Pay_Period_Due_Date">繳納期間屆滿日</label>
+
+
+            <input [ngModel]="Pay_Period_Due_Date" formControlName="Pay_Period_Due_Date" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Is_Punishment">是否行政處分確定</label>
+
+
+            <input [ngModel]="Is_Punishment" formControlName="Is_Punishment" type="checkbox" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="End_File_No">歸檔檔號</label>
+
+
+            <input [ngModel]="End_File_No" formControlName="End_File_No" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="End_File_Date">歸檔日期</label>
+
+
+            <input [ngModel]="End_File_Date" formControlName="End_File_Date" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="BatchNo">歸檔批號-流水號</label>
+
+
+            <input [ngModel]="BatchNo" formControlName="BatchNo" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="BatchYear">歸檔批號-年度</label>
+
+
+            <input [ngModel]="BatchYear" formControlName="BatchYear" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="End_Print_Date">歸檔列印日期</label>
+
+
+            <input [ngModel]="End_Print_Date" formControlName="End_Print_Date" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="End_Valid_Date">歸檔審核日期</label>
+
+
+            <input [ngModel]="End_Valid_Date" formControlName="End_Valid_Date" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Agency_Id">行政執行分屬代碼前2碼</label>
+
+
+
+            <div class="row">
+              <div class="col-xs-12 checkbox">
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="TP" type="radio" />
+                  TP
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="SL" type="radio" />
+                  SL
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="PC" type="radio" />
+                  PC
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="TY" type="radio" />
+                  TY
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="SC" type="radio" />
+                  SC
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="TC" type="radio" />
+                  TC
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="CH" type="radio" />
+                  CH
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="CY" type="radio" />
+                  CY
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="TN" type="radio" />
+                  TN
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="KS" type="radio" />
+                  KS
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="PT" type="radio" />
+                  PT
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="HL" type="radio" />
+                  HL
+                </label>
+
+                <label>
+                  <input formControlName="Agency_Id" [ngModel]="Agency_Id" name="Agency_Id" value="IL" type="radio" />
+                  IL
+                </label>
+
+              </div>
             </div>
-          
-            <div class="form-group text-left">
-              <label for="End_File_Submiter">歸檔人</label>
-              
-              
-                
-                  <textarea [ngModel]="End_File_Submiter" formControlName="End_File_Submiter" class="form-control" rows="3"></textarea>
-                
-              
 
-            </div>
 
-            
-          
-            <div class="form-group text-left">
-              <label for="End_File_Printer">歸檔列印人</label>
-              
-              
-                
-                  <textarea [ngModel]="End_File_Printer" formControlName="End_File_Printer" class="form-control" rows="3"></textarea>
-                
-              
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="File_URL">檔案暫存路徑</label>
-              
-              
-                <input [ngModel]="File_URL"formControlName="File_URL" type="text" class="form-control">
-              
+          </div>
 
-            </div>
-          
-            <div class="form-group text-left">
-              <label for="End_File_URL">歸檔檔案路徑</label>
-              
-              
-                <input [ngModel]="End_File_URL"formControlName="End_File_URL" type="text" class="form-control">
-              
+          <div class="form-group text-left">
+            <label for="Transfer_Agency_Id">移送機關代號</label>
 
-            </div>
-          
+
+            <input [ngModel]="Transfer_Agency_Id" formControlName="Transfer_Agency_Id" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Transfer_Date">移送日期</label>
+
+
+            <input [ngModel]="Transfer_Date" formControlName="Transfer_Date" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="Creator">建檔人</label>
+
+
+
+            <textarea [ngModel]="Creator" formControlName="Creator" class="form-control" rows="3"></textarea>
+
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="End_File_Submiter">歸檔人</label>
+
+
+
+            <textarea [ngModel]="End_File_Submiter" formControlName="End_File_Submiter" class="form-control" rows="3"></textarea>
+
+
+
+          </div>
+
+
+
+          <div class="form-group text-left">
+            <label for="End_File_Printer">歸檔列印人</label>
+
+
+
+            <textarea [ngModel]="End_File_Printer" formControlName="End_File_Printer" class="form-control" rows="3"></textarea>
+
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="File_URL">檔案暫存路徑</label>
+
+
+            <input [ngModel]="File_URL" formControlName="File_URL" type="text" class="form-control">
+
+
+          </div>
+
+          <div class="form-group text-left">
+            <label for="End_File_URL">歸檔檔案路徑</label>
+
+
+            <input [ngModel]="End_File_URL" formControlName="End_File_URL" type="text" class="form-control">
+
+
+          </div>
+
 
 
         </div>
@@ -1162,15 +856,15 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="deleteAssetModalLabel">Delete Asset</h4>
+        <h4 class="modal-title" id="deleteAssetModalLabel">刪除資產</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
-          Are you sure you want to delete this asset?
+          您確定要刪除這個資產嗎？
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">是</button>
         </div>
       </form>
     </div>
@@ -1188,190 +882,204 @@
 
 
 <div class="container">
-	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-		<strong>Error:</strong> {{errorMessage}}
-	</div>
-  
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    <strong>Error:</strong> {{errorMessage}}
+  </div>
+
   <div class="row">
     <div class="col-md-9">
-        <h1 class="asset-title" id='assetName'>公文</h1>
+      <h1 class="asset-title" id='assetName'>公文</h1>
     </div>
     <div class="col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">
-          <span style="font-size: 14px;font-family: inherit;border-right:1px solid rgba(255,255,255,0.5);padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
-              <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
-              </svg>
-          </span>
+        <span style="font-size: 14px;font-family: inherit;border-right:1px solid rgba(255,255,255,0.5);padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
+          <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+            <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z" />
+          </svg>
+        </span>
         建立資產
       </button>
     </div>
   </div>
   <br>
-  <div class="row table-wrap">
-    <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-12 table-wrap"  id="table-container">
+      <button id="table-container-close" type="button" class="close hidden" aria-label="Close" (click)="fullscreen();" ><span aria-hidden="true">&times;</span></button>
       <table class="od-table table table-responsive">
         <thead class="thead">
           <tr class="thead-cols">
-            
-                <th class="info">發文字號</th>
-            
-                <th class="info">發文日期</th>
-            
-                <th class="info">案件類別</th>
-            
-                <th class="info">移送案號</th>
-            
-                <th class="info">義務人姓名</th>
-            
-                <th class="info">出生日期 （義務人）</th>
-            
-                <th class="info">戶籍郵遞區號（義務人）</th>
-            
-                <th class="info">戶籍地址（義務人）</th>
-            
-                <th class="info">案由代碼</th>
-            
-                <th class="info">應納金額</th>
-            
-                <th class="info">保全措施（已限制出境）</th>
-            
-                <th class="info">保全措施（已禁止處分）</th>
-            
-                <th class="info">保全措施（已提供擔保）</th>
-            
-                <th class="info">保全措施（已假扣押）</th>
-            
-                <th class="info">保全措施（已勒令停業）</th>
-            
-                <th class="info">繳納期間屆滿日</th>
-            
-                <th class="info">是否行政處分確定</th>
-            
-                <th class="info">歸檔檔號</th>
-            
-                <th class="info">歸檔日期</th>
-            
-                <th class="info">歸檔批號-流水號</th>
-            
-                <th class="info">歸檔批號-年度</th>
-            
-                <th class="info">歸檔列印日期</th>
-            
-                <th class="info">歸檔審核日期</th>
-            
-                <th class="info">行政執行分屬代碼前2碼</th>
-            
-                <th class="info">移送機關代號</th>
-            
-                <th class="info">移送日期</th>
 
-                <th class="info">建檔人</th>
-            
-                <th class="info">歸檔人</th>
-            
-                <th class="info">歸檔列印人</th>
-            
-                <th class="info">檔案暫存路徑</th>
-            
-                <th class="info">歸檔檔案路徑</th>
-            
-              <th class="info-actions">編輯選項</th>
+            <th class="info">發文字號</th>
+
+            <th class="info">發文日期</th>
+
+            <th class="info">案件類別</th>
+
+            <th class="info">移送案號</th>
+
+            <th class="info">義務人姓名</th>
+
+            <th class="info">出生日期 （義務人）</th>
+
+            <th class="info">戶籍郵遞區號（義務人）</th>
+
+            <th class="info">戶籍地址（義務人）</th>
+
+            <th class="info">案由代碼</th>
+
+            <th class="info">應納金額</th>
+
+            <th class="info">保全措施（已限制出境）</th>
+
+            <th class="info">保全措施（已禁止處分）</th>
+
+            <th class="info">保全措施（已提供擔保）</th>
+
+            <th class="info">保全措施（已假扣押）</th>
+
+            <th class="info">保全措施（已勒令停業）</th>
+
+            <th class="info">繳納期間屆滿日</th>
+
+            <th class="info">是否行政處分確定</th>
+
+            <th class="info">歸檔檔號</th>
+
+            <th class="info">歸檔日期</th>
+
+            <th class="info">歸檔批號-流水號</th>
+
+            <th class="info">歸檔批號-年度</th>
+
+            <th class="info">歸檔列印日期</th>
+
+            <th class="info">歸檔審核日期</th>
+
+            <th class="info">行政執行分屬代碼前2碼</th>
+
+            <th class="info">移送機關代號</th>
+
+            <th class="info">移送日期</th>
+
+            <th class="info">建檔人</th>
+
+            <th class="info">歸檔人</th>
+
+            <th class="info">歸檔列印人</th>
+
+            <th class="info">檔案暫存路徑</th>
+
+            <th class="info">歸檔檔案路徑</th>
+
+            <th class="info-actions">編輯選項</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let asset of allAssets">
 
+
+            <td class="asset-properties">{{asset.Issue_No}}</td>
+
+            <td class="asset-properties">{{asset.Issue_Date}}</td>
+
+            <td class="asset-properties">{{asset.Class_Type}}</td>
+
+            <td class="asset-properties">{{asset.Send_Class_ID}}</td>
+
+            <td class="asset-properties">{{asset.Duty_Name}}</td>
+
+            <td class="asset-properties">{{asset.Duty_Birthday}}</td>
+
+            <td class="asset-properties">{{asset.Duty_ZipCode}}</td>
+
+            <td class="asset-properties">{{asset.Duty_Addr}}</td>
+
+            <td class="asset-properties">{{asset.Legal_Case_ID}}</td>
+
+            <td class="asset-properties">{{asset.Pay_Amt}}</td>
+
+            <td class="asset-properties">{{asset.Protect_Exit_Org}}</td>
+
+            <td class="asset-properties">{{asset.Protect_Punish_Org}}</td>
+
+            <td class="asset-properties">{{asset.Protect_Guar_Org}}</td>
+
+            <td class="asset-properties">{{asset.Protect_Sei_Org}}</td>
+
+            <td class="asset-properties">{{asset.Protect_Closed_Org}}</td>
+
+            <td class="asset-properties">{{asset.Pay_Period_Due_Date}}</td>
+
+            <td class="asset-properties">{{asset.Is_Punishment}}</td>
+
+            <td class="asset-properties">{{asset.End_File_No}}</td>
+
+            <td class="asset-properties">{{asset.End_File_Date}}</td>
+
+            <td class="asset-properties">{{asset.BatchNo}}</td>
+
+            <td class="asset-properties">{{asset.BatchYear}}</td>
+
+            <td class="asset-properties">{{asset.End_Print_Date}}</td>
+
+            <td class="asset-properties">{{asset.End_Valid_Date}}</td>
+
+            <td class="asset-properties">{{asset.Agency_Id}}</td>
+
+            <td class="asset-properties">{{asset.Transfer_Agency_Id}}</td>
+
+            <td class="asset-properties">{{asset.Transfer_Date}}</td>
+
+            <td class="asset-properties">{{(asset.Creator) ? asset.Creator.split("#").pop() : ""}}</td>
             
-                <td class="asset-properties">{{asset.Issue_No}}</td>
-            
-                <td class="asset-properties">{{asset.Issue_Date}}</td>
-            
-                <td class="asset-properties">{{asset.Class_Type}}</td>
-            
-                <td class="asset-properties">{{asset.Send_Class_ID}}</td>
-            
-                <td class="asset-properties">{{asset.Duty_Name}}</td>
-            
-                <td class="asset-properties">{{asset.Duty_Birthday}}</td>
-            
-                <td class="asset-properties">{{asset.Duty_ZipCode}}</td>
-            
-                <td class="asset-properties">{{asset.Duty_Addr}}</td>
-            
-                <td class="asset-properties">{{asset.Legal_Case_ID}}</td>
-            
-                <td class="asset-properties">{{asset.Pay_Amt}}</td>
-            
-                <td class="asset-properties">{{asset.Protect_Exit_Org}}</td>
-            
-                <td class="asset-properties">{{asset.Protect_Punish_Org}}</td>
-            
-                <td class="asset-properties">{{asset.Protect_Guar_Org}}</td>
-            
-                <td class="asset-properties">{{asset.Protect_Sei_Org}}</td>
-            
-                <td class="asset-properties">{{asset.Protect_Closed_Org}}</td>
-            
-                <td class="asset-properties">{{asset.Pay_Period_Due_Date}}</td>
-            
-                <td class="asset-properties">{{asset.Is_Punishment}}</td>
-            
-                <td class="asset-properties">{{asset.End_File_No}}</td>
-            
-                <td class="asset-properties">{{asset.End_File_Date}}</td>
-            
-                <td class="asset-properties">{{asset.BatchNo}}</td>
-            
-                <td class="asset-properties">{{asset.BatchYear}}</td>
-            
-                <td class="asset-properties">{{asset.End_Print_Date}}</td>
-            
-                <td class="asset-properties">{{asset.End_Valid_Date}}</td>
-            
-                <td class="asset-properties">{{asset.Agency_Id}}</td>
-            
-                <td class="asset-properties">{{asset.Transfer_Agency_Id}}</td>
-            
-                <td class="asset-properties">{{asset.Transfer_Date}}</td>
-            
-                <td class="asset-properties">{{asset.Creator}}</td>
-                <td class="asset-properties">{{asset.End_File_Submiter}}</td>
-            
-                <td class="asset-properties">{{asset.End_File_Printer}}</td>
-            
-                <td class="asset-properties">{{asset.File_URL}}</td>
-            
-                <td class="asset-properties"><a href="{{asset.End_File_URL}}">{{asset.End_File_URL}}</a></td>
-            
-            <td>
-              <button (click)="getForm(asset.Issue_No);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="12.8px" height="12.8px" viewBox="0 0 30.7 30.7" style="enable-background:new 0 0 30.7 30.7;" xml:space="preserve">
-               <g>
-                 <path d="M1.5,30.7c0.1,0,0.2,0,0.4,0l5.9-1.5c0.8-0.2,1.3-1,1.1-1.8c-0.2-0.8-1-1.3-1.8-1.1l-3.6,0.9l0.8-3.8
-                   c0.2-0.8-0.4-1.6-1.2-1.8c-0.8-0.2-1.6,0.4-1.8,1.2L0,28.9c-0.1,0.5,0.1,1,0.4,1.4C0.7,30.6,1.1,30.7,1.5,30.7z"/>
-                 <path d="M10.4,25.2c0.3,0.3,0.7,0.4,1.1,0.4c0.4,0,0.8-0.1,1.1-0.4L30.3,7.5c0.6-0.6,0.6-1.5,0-2.1l-4.9-4.9
+            <td class="asset-properties">{{(asset.End_File_Submiter) ? asset.End_File_Submiter.split("#").pop() : ""}}</td>
+
+            <td class="asset-properties">{{(asset.End_File_Printer) ? asset.End_File_Printer.split("#").pop() : "" }}</td>
+
+            <td class="asset-properties">{{asset.File_URL}}</td>
+
+            <td class="asset-properties"><a href="{{asset.End_File_URL}}">{{asset.End_File_URL}}</a></td>
+
+            <td class="asset-actions">
+              <button (click)="getForm(asset.Issue_No);" type="button" class="btn btn-update" data-toggle="modal"
+                data-target="#updateAssetModal">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="12.8px" height="12.8px" viewBox="0 0 30.7 30.7" style="enable-background:new 0 0 30.7 30.7;"
+                  xml:space="preserve">
+                  <g>
+                    <path d="M1.5,30.7c0.1,0,0.2,0,0.4,0l5.9-1.5c0.8-0.2,1.3-1,1.1-1.8c-0.2-0.8-1-1.3-1.8-1.1l-3.6,0.9l0.8-3.8
+                   c0.2-0.8-0.4-1.6-1.2-1.8c-0.8-0.2-1.6,0.4-1.8,1.2L0,28.9c-0.1,0.5,0.1,1,0.4,1.4C0.7,30.6,1.1,30.7,1.5,30.7z" />
+                    <path d="M10.4,25.2c0.3,0.3,0.7,0.4,1.1,0.4c0.4,0,0.8-0.1,1.1-0.4L30.3,7.5c0.6-0.6,0.6-1.5,0-2.1l-4.9-4.9
                    C25.1,0.2,24.7,0,24.3,0c-0.4,0-0.8,0.2-1.1,0.4L5.5,18.2c-0.3,0.3-0.4,0.7-0.4,1.1s0.2,0.8,0.4,1.1L10.4,25.2z M24.3,3.6l2.8,2.8
-                   L11.5,22l-2.8-2.8L24.3,3.6z"/>
-               </g>
-               </svg>
+                   L11.5,22l-2.8-2.8L24.3,3.6z" />
+                  </g>
+                </svg>
               </button>
 
-              <button (click)="setId(asset.Issue_No);" type="button" class="btn btn-delete" data-toggle="modal" data-target="#deleteAssetModal">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="13.8px" height="16px" viewBox="0 0 65.9 76.2" style="enable-background:new 0 0 65.9 76.2;" xml:space="preserve">
-               <path d="M42.8,60.2V22.6c0-1.7-1.3-3-3-3s-3,1.3-3,3v37.6c0,1.7,1.3,3,3,3S42.8,61.9,42.8,60.2z M29.1,60.2V22.6c0-1.7-1.3-3-3-3
+              <button (click)="setId(asset.Issue_No);" type="button" class="btn btn-delete" data-toggle="modal"
+                data-target="#deleteAssetModal">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="13.8px" height="16px" viewBox="0 0 65.9 76.2" style="enable-background:new 0 0 65.9 76.2;"
+                  xml:space="preserve">
+                  <path d="M42.8,60.2V22.6c0-1.7-1.3-3-3-3s-3,1.3-3,3v37.6c0,1.7,1.3,3,3,3S42.8,61.9,42.8,60.2z M29.1,60.2V22.6c0-1.7-1.3-3-3-3
                  s-3,1.3-3,3v37.6c0,1.7,1.3,3,3,3S29.1,61.9,29.1,60.2z M56.2,19.6c-1.7,0-3,1.3-3,3V68c0,1.2-1,2.2-2.2,2.2H14.9
                  c-1.2,0-2.2-1-2.2-2.2V22.6c0-1.7-1.3-3-3-3s-3,1.3-3,3V68c0,4.5,3.7,8.2,8.2,8.2H51c4.5,0,8.2-3.7,8.2-8.2V22.6
                  C59.2,21,57.9,19.6,56.2,19.6z M62.9,10.3H49.3V3c0-1.7-1.3-3-3-3H19.6c-1.7,0-3,1.3-3,3v7.3H3c-1.7,0-3,1.3-3,3s1.3,3,3,3h59.9
-                 c1.7,0,3-1.3,3-3S64.5,10.3,62.9,10.3z M43.3,10.3H22.6V6h20.7L43.3,10.3L43.3,10.3z"/>
-               </svg>
+                 c1.7,0,3-1.3,3-3S64.5,10.3,62.9,10.3z M43.3,10.3H22.6V6h20.7L43.3,10.3L43.3,10.3z" />
+                </svg>
               </button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+  </div>
+
+  <div>
+      <div class="col-md-12">
+        <button id="fullscreen-button" (click)="fullscreen();" type="button" class="btn btn-secondary">
+          全螢幕
+        </button>
+      </div>
   </div>
 </div>
