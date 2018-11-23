@@ -18,29 +18,29 @@
 
     <ul class="nav navbar-nav">
       <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Assets</a>
+        <a class="dropdown-toggle" data-toggle="dropdown">資產</a>
         <ul class="dropdown-menu scrollable-menu">
 
-          <li><a [routerLink]="['/OfficialDocument']">OfficialDocument</a></li>
+          <li><a [routerLink]="['/OfficialDocument']">公文</a></li>
 
         </ul>
       </li>
       <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Participants</a>
+        <a class="dropdown-toggle" data-toggle="dropdown">參與者</a>
         <ul class="dropdown-menu scrollable-menu">
 
-          <li><a [routerLink]="['/Secretary']">Secretary</a></li>
-          <li><a [routerLink]="['/Querent']">Querent</a></li>
+          <li><a [routerLink]="['/Secretary']">秘書</a></li>
+          <li><a [routerLink]="['/Querent']">調閱人</a></li>
 
         </ul>
       </li>
       <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Transactions</a>
+        <a class="dropdown-toggle" data-toggle="dropdown">交易</a>
         <ul class="dropdown-menu scrollable-menu">
 
-          <li><a [routerLink]="['/Archive']">Archive</a></li>
-          <li><a [routerLink]="['/ArchivePrint']">ArchivePrint</a></li>
-          <li><a [routerLink]="['/Demo']">Demo</a></li>
+          <li><a [routerLink]="['/Archive']">歸檔</a></li>
+          <li class="hidden"><a [routerLink]="['/ArchivePrint']">歸檔列印</a></li>
+          <li class="hidden"><a [routerLink]="['/Demo']">測試資料</a></li>
 
         </ul>
       </li>
@@ -49,7 +49,7 @@
 </nav>
 <router-outlet class="router-outlet"></router-outlet>
 <footer class="footer">
-  <span class="navbar-brand">angular-app</span>
+  <span class="navbar-brand">公文歸檔系統</span>
   <span class="network-name">archive-network@0.0.10.bna</span>
   <span class="creator">david.kim@acer.com</span>
 

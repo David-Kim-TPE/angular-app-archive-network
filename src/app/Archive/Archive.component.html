@@ -16,14 +16,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
+        <h4 class="modal-title" id="addTransactionModalLabel">建立交易</h4>
         <ul class="default-list">
-          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(1)">default-one</a></li>
-          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(2)">default-two</a></li>
-          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(3)">default-three</a></li>
-          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(4)">default-four</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(1)">預設1</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(2)">預設2</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(3)">預設3</a></li>
+          <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(4)">預設4</a></li>
         </ul>
-        <p class="modal-intro">Enter the required values below.</p>
+        <p class="modal-intro">將必要的值輸入在下方</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -33,7 +33,7 @@
 
             
               <div class="form-group text-left">
-                <label for="od">od</label>
+                <label for="od">公文</label>
                 
                     <textarea formControlName="od" class="form-control" rows="3"></textarea>
                 
@@ -43,7 +43,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_File_No">End_File_No</label>
+                <label for="End_File_No">歸檔檔號</label>
                 
                   <input formControlName="End_File_No" type="text" class="form-control">
                 
@@ -53,7 +53,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_File_Date">End_File_Date</label>
+                <label for="End_File_Date">歸檔日期</label>
                 
                   <input formControlName="End_File_Date" type="text" class="form-control">
                 
@@ -63,7 +63,7 @@
 
             
               <div class="form-group text-left">
-                <label for="BatchNo">BatchNo</label>
+                <label for="BatchNo">歸檔批號-流水號</label>
                 
                   <input formControlName="BatchNo" type="text" class="form-control">
                 
@@ -73,7 +73,7 @@
 
             
               <div class="form-group text-left">
-                <label for="BatchYear">BatchYear</label>
+                <label for="BatchYear">歸檔批號-年度</label>
                 
                   <input formControlName="BatchYear" type="text" class="form-control">
                 
@@ -84,7 +84,7 @@
           
 
               <div class="form-group text-left">
-                <label for="End_File_URL">End_File_URL</label>
+                <label for="End_File_URL">歸檔檔案URL</label>
     
                 <input formControlName="End_File_URL" type="text" class="form-control">
                 <app-file-upload (uploaded)="onUploaded($event)" #fileUpload></app-file-upload>
@@ -104,8 +104,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">確認</button>
         </div>
       </form>
     </div>
@@ -119,7 +119,7 @@
 
   <div class="row">
     <div class="col-md-12">
-        <h1 class="transaction-title" id='transactionName'>Archive</h1>
+        <h1 class="transaction-title" id='transactionName'>歸檔</h1>
     </div>
   </div>
   <br>
@@ -127,37 +127,37 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-12">
-          When invoked, this transaction will have the following attributes:
+          本交易被觸發後將會擁有下列屬性:
           <br>
           <ul>
             
               
-                <li><span class="attribute"><b>od</b></span></li>
+                <li><span class="attribute"><b>公文</b></span></li>
               
             
               
-                <li><span class="attribute"><b>End_File_No</b></span></li>
+                <li><span class="attribute"><b>歸檔檔號</b></span></li>
               
             
               
-                <li><span class="attribute"><b>End_File_Date</b></span></li>
+                <li><span class="attribute"><b>歸檔日期</b></span></li>
               
             
               
-                <li><span class="attribute"><b>BatchNo</b></span></li>
+                <li><span class="attribute"><b>歸檔批號-流水號</b></span></li>
               
             
               
-                <li><span class="attribute"><b>BatchYear</b></span></li>
+                <li><span class="attribute"><b>歸檔批號-年度</b></span></li>
               
             
               
-                <li><span class="attribute"><b>End_File_URL</b></span></li>
+                <li><span class="attribute"><b>歸檔檔案URL</b></span></li>
               
           </ul>
         </div>
       </div>
-      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">Invoke</button>
+      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">觸發</button>
     </div>
   </div>
 </div>

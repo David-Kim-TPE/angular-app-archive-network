@@ -16,14 +16,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Create asset</h4>
+        <h4 class="modal-title" id="addAssetModalLabel">建立資產</h4>
           <ul class="default-list">
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(1)">default-one</a></li>
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(2)">default-two</a></li>
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(3)">default-three</a></li>
-            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(4)">default-four</a></li>
+            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(1)">預設1</a></li>
+            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(2)">預設2</a></li>
+            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(3)">預設3</a></li>
+            <li class="default-list-item"><a class="ankor-default" (click)="onClickDefault(4)">預設4</a></li>
           </ul>
-          <p class="modal-intro">Enter the required values below.</p>
+          <p class="modal-intro">輸入以下必要的欄位</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -33,7 +33,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Issue_No">Issue_No</label>
+                <label for="Issue_No">發文字號</label>
                 
                   <input formControlName="Issue_No" type="text" class="form-control">
                 
@@ -43,7 +43,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Issue_Date">Issue_Date</label>
+                <label for="Issue_Date">發文日期</label>
                 
                   <input formControlName="Issue_Date" type="text" class="form-control">
                 
@@ -52,7 +52,7 @@
           
 
             
-              <label for="Class_Type">Class_Type</label>
+              <label for="Class_Type">案件類別</label>
               <div class="checkbox">
                 
                   <label>
@@ -126,7 +126,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Send_Class_ID">Send_Class_ID</label>
+                <label for="Send_Class_ID">移送案號</label>
                 
                   <input formControlName="Send_Class_ID" type="text" class="form-control">
                 
@@ -136,7 +136,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Duty_Name">Duty_Name</label>
+                <label for="Duty_Name">義務人姓名</label>
                 
                   <input formControlName="Duty_Name" type="text" class="form-control">
                 
@@ -146,7 +146,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Duty_Birthday">Duty_Birthday</label>
+                <label for="Duty_Birthday">出生日期（義務人）</label>
                 
                   <input formControlName="Duty_Birthday" type="text" class="form-control">
                 
@@ -156,7 +156,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Duty_ZipCode">Duty_ZipCode</label>
+                <label for="Duty_ZipCode">戶籍郵遞區號（義務人）</label>
                 
                   <input formControlName="Duty_ZipCode" type="text" class="form-control">
                 
@@ -166,7 +166,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Duty_Addr">Duty_Addr</label>
+                <label for="Duty_Addr">戶籍地址（義務人）</label>
                 
                   <input formControlName="Duty_Addr" type="text" class="form-control">
                 
@@ -176,7 +176,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Legal_Case_ID">Legal_Case_ID</label>
+                <label for="Legal_Case_ID">案由代碼</label>
                 
                   <input formControlName="Legal_Case_ID" type="text" class="form-control">
                 
@@ -186,7 +186,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Pay_Amt">Pay_Amt</label>
+                <label for="Pay_Amt">應納金額</label>
                 
                   <input formControlName="Pay_Amt" type="number" class="form-control">
                 
@@ -196,7 +196,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Protect_Exit_Org">Protect_Exit_Org</label>
+                <label for="Protect_Exit_Org">保全措施（已限制出境）</label>
                 
                   <input formControlName="Protect_Exit_Org" type="checkbox" class="form-control">
                 
@@ -206,7 +206,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Protect_Punish_Org">Protect_Punish_Org</label>
+                <label for="Protect_Punish_Org">保全措施（已禁止處分）</label>
                 
                   <input formControlName="Protect_Punish_Org" type="checkbox" class="form-control">
                 
@@ -216,7 +216,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Protect_Guar_Org">Protect_Guar_Org</label>
+                <label for="Protect_Guar_Org">保全措施（已提供擔保）</label>
                 
                   <input formControlName="Protect_Guar_Org" type="checkbox" class="form-control">
                 
@@ -226,7 +226,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Protect_Sei_Org">Protect_Sei_Org</label>
+                <label for="Protect_Sei_Org">保全措施（已假扣押）</label>
                 
                   <input formControlName="Protect_Sei_Org" type="checkbox" class="form-control">
                 
@@ -236,7 +236,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Protect_Closed_Org">Protect_Closed_Org</label>
+                <label for="Protect_Closed_Org">保全措施（已勒令停業）</label>
                 
                   <input formControlName="Protect_Closed_Org" type="checkbox" class="form-control">
                 
@@ -246,7 +246,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Pay_Period_Due_Date">Pay_Period_Due_Date</label>
+                <label for="Pay_Period_Due_Date">繳納期間屆滿日</label>
                 
                   <input formControlName="Pay_Period_Due_Date" type="text" class="form-control">
                 
@@ -256,7 +256,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Is_Punishment">Is_Punishment</label>
+                <label for="Is_Punishment">是否行政處分確定</label>
                 
                   <input formControlName="Is_Punishment" type="checkbox" class="form-control">
                 
@@ -266,7 +266,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_File_No">End_File_No</label>
+                <label for="End_File_No">歸檔檔號</label>
                 
                   <input formControlName="End_File_No" type="text" class="form-control">
                 
@@ -276,7 +276,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_File_Date">End_File_Date</label>
+                <label for="End_File_Date">歸檔日期</label>
                 
                   <input formControlName="End_File_Date" type="text" class="form-control">
                 
@@ -286,7 +286,7 @@
 
             
               <div class="form-group text-left">
-                <label for="BatchNo">BatchNo</label>
+                <label for="BatchNo">歸檔批號-流水號</label>
                 
                   <input formControlName="BatchNo" type="text" class="form-control">
                 
@@ -296,7 +296,7 @@
 
             
               <div class="form-group text-left">
-                <label for="BatchYear">BatchYear</label>
+                <label for="BatchYear">歸檔批號-年度</label>
                 
                   <input formControlName="BatchYear" type="text" class="form-control">
                 
@@ -306,7 +306,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_Print_Date">End_Print_Date</label>
+                <label for="End_Print_Date">歸檔列印日期</label>
                 
                   <input formControlName="End_Print_Date" type="text" class="form-control">
                 
@@ -316,7 +316,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_Valid_Date">End_Valid_Date</label>
+                <label for="End_Valid_Date">歸檔審核日期</label>
                 
                   <input formControlName="End_Valid_Date" type="text" class="form-control">
                 
@@ -325,7 +325,7 @@
           
 
             
-              <label for="Agency_Id">Agency_Id</label>
+              <label for="Agency_Id">行政執行分屬代碼前2碼</label>
               <div class="checkbox">
                 
                   <label>
@@ -503,7 +503,7 @@
 
             
               <div class="form-group text-left">
-                <label for="Transfer_Agency_Id">Transfer_Agency_Id</label>
+                <label for="Transfer_Agency_Id">移送機關代號</label>
                 
                   <input formControlName="Transfer_Agency_Id" type="text" class="form-control">
                 
@@ -513,24 +513,14 @@
 
             
               <div class="form-group text-left">
-                <label for="Transfer_Date">Transfer_Date</label>
+                <label for="Transfer_Date">移送日期</label>
                 
                   <input formControlName="Transfer_Date" type="text" class="form-control">
                 
               </div>
             
-          
-
-            
               <div class="form-group text-left">
-                <label for="End_File_Submiter">End_File_Submiter</label>
-                
-                    <textarea formControlName="End_File_Submiter" class="form-control" rows="3"></textarea>
-                
-              </div>
-
-              <div class="form-group text-left">
-                <label for="Creator">Creator</label>
+                <label for="Creator">建檔人</label>
                 
                     <textarea formControlName="Creator" class="form-control" rows="3"></textarea>
                 
@@ -538,7 +528,17 @@
 
             
               <div class="form-group text-left">
-                <label for="End_File_Printer">End_File_Printer</label>
+                <label for="End_File_Submiter">歸檔人</label>
+                
+                    <textarea formControlName="End_File_Submiter" class="form-control" rows="3"></textarea>
+                
+              </div>
+
+              
+
+            
+              <div class="form-group text-left">
+                <label for="End_File_Printer">歸檔列印人</label>
                 
                     <textarea formControlName="End_File_Printer" class="form-control" rows="3"></textarea>
                 
@@ -548,7 +548,7 @@
 
             
               <div class="form-group text-left">
-                <label for="File_URL">File_URL</label>
+                <label for="File_URL">檔案暫存路徑</label>
                 
                   <input formControlName="File_URL" type="text" class="form-control">
                 
@@ -558,7 +558,7 @@
 
             
               <div class="form-group text-left">
-                <label for="End_File_URL">End_File_URL</label>
+                <label for="End_File_URL">歸檔檔案路徑</label>
                 
                   <input formControlName="End_File_URL" type="text" class="form-control">
                 
@@ -568,8 +568,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">確認</button>
 
         </div>
       </form>
@@ -585,7 +585,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
+        <h4 class="modal-title" id="updateAssetModalLabel">修改資產</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -593,7 +593,7 @@
 
           
             <div class="form-group text-left">
-              <label for="Issue_No">Issue_No</label>
+              <label for="Issue_No">發文字號</label>
               
               
                 <input [ngModel]="Issue_No" formControlName="Issue_No" class="form-control" disabled="disabled">  
@@ -602,7 +602,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Issue_Date">Issue_Date</label>
+              <label for="Issue_Date">發文日期</label>
               
               
                 <input [ngModel]="Issue_Date"formControlName="Issue_Date" type="text" class="form-control">
@@ -611,7 +611,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Class_Type">Class_Type</label>
+              <label for="Class_Type">案件類別</label>
               
               
                 
@@ -696,7 +696,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Send_Class_ID">Send_Class_ID</label>
+              <label for="Send_Class_ID">移送案號</label>
               
               
                 <input [ngModel]="Send_Class_ID"formControlName="Send_Class_ID" type="text" class="form-control">
@@ -705,7 +705,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Duty_Name">Duty_Name</label>
+              <label for="Duty_Name">義務人姓名</label>
               
               
                 <input [ngModel]="Duty_Name"formControlName="Duty_Name" type="text" class="form-control">
@@ -714,7 +714,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Duty_Birthday">Duty_Birthday</label>
+              <label for="Duty_Birthday">出生日期（義務人）</label>
               
               
                 <input [ngModel]="Duty_Birthday"formControlName="Duty_Birthday" type="text" class="form-control">
@@ -723,7 +723,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Duty_ZipCode">Duty_ZipCode</label>
+              <label for="Duty_ZipCode">戶籍郵遞區號（義務人）</label>
               
               
                 <input [ngModel]="Duty_ZipCode"formControlName="Duty_ZipCode" type="text" class="form-control">
@@ -732,7 +732,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Duty_Addr">Duty_Addr</label>
+              <label for="Duty_Addr">戶籍地址（義務人）</label>
               
               
                 <input [ngModel]="Duty_Addr"formControlName="Duty_Addr" type="text" class="form-control">
@@ -741,7 +741,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Legal_Case_ID">Legal_Case_ID</label>
+              <label for="Legal_Case_ID">案由代碼</label>
               
               
                 <input [ngModel]="Legal_Case_ID"formControlName="Legal_Case_ID" type="text" class="form-control">
@@ -750,7 +750,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Pay_Amt">Pay_Amt</label>
+              <label for="Pay_Amt">應納金額</label>
               
               
                 <input [ngModel]="Pay_Amt" formControlName="Pay_Amt" type="number" class="form-control">
@@ -759,7 +759,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Protect_Exit_Org">Protect_Exit_Org</label>
+              <label for="Protect_Exit_Org">保全措施（已限制出境）</label>
               
               
                 <input [ngModel]="Protect_Exit_Org" formControlName="Protect_Exit_Org" type="checkbox" class="form-control">
@@ -768,7 +768,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Protect_Punish_Org">Protect_Punish_Org</label>
+              <label for="Protect_Punish_Org">保全措施（已禁止處分）</label>
               
               
                 <input [ngModel]="Protect_Punish_Org" formControlName="Protect_Punish_Org" type="checkbox" class="form-control">
@@ -777,7 +777,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Protect_Guar_Org">Protect_Guar_Org</label>
+              <label for="Protect_Guar_Org">保全措施（已提供擔保）</label>
               
               
                 <input [ngModel]="Protect_Guar_Org" formControlName="Protect_Guar_Org" type="checkbox" class="form-control">
@@ -786,7 +786,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Protect_Sei_Org">Protect_Sei_Org</label>
+              <label for="Protect_Sei_Org">保全措施（已假扣押）</label>
               
               
                 <input [ngModel]="Protect_Sei_Org" formControlName="Protect_Sei_Org" type="checkbox" class="form-control">
@@ -795,7 +795,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Protect_Closed_Org">Protect_Closed_Org</label>
+              <label for="Protect_Closed_Org">保全措施（已勒令停業）</label>
               
               
                 <input [ngModel]="Protect_Closed_Org" formControlName="Protect_Closed_Org" type="checkbox" class="form-control">
@@ -804,7 +804,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Pay_Period_Due_Date">Pay_Period_Due_Date</label>
+              <label for="Pay_Period_Due_Date">繳納期間屆滿日</label>
               
               
                 <input [ngModel]="Pay_Period_Due_Date"formControlName="Pay_Period_Due_Date" type="text" class="form-control">
@@ -813,7 +813,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Is_Punishment">Is_Punishment</label>
+              <label for="Is_Punishment">是否行政處分確定</label>
               
               
                 <input [ngModel]="Is_Punishment" formControlName="Is_Punishment" type="checkbox" class="form-control">
@@ -822,7 +822,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="End_File_No">End_File_No</label>
+              <label for="End_File_No">歸檔檔號</label>
               
               
                 <input [ngModel]="End_File_No"formControlName="End_File_No" type="text" class="form-control">
@@ -831,7 +831,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="End_File_Date">End_File_Date</label>
+              <label for="End_File_Date">歸檔日期</label>
               
               
                 <input [ngModel]="End_File_Date"formControlName="End_File_Date" type="text" class="form-control">
@@ -840,7 +840,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="BatchNo">BatchNo</label>
+              <label for="BatchNo">歸檔批號-流水號</label>
               
               
                 <input [ngModel]="BatchNo"formControlName="BatchNo" type="text" class="form-control">
@@ -849,7 +849,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="BatchYear">BatchYear</label>
+              <label for="BatchYear">歸檔批號-年度</label>
               
               
                 <input [ngModel]="BatchYear"formControlName="BatchYear" type="text" class="form-control">
@@ -858,7 +858,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="End_Print_Date">End_Print_Date</label>
+              <label for="End_Print_Date">歸檔列印日期</label>
               
               
                 <input [ngModel]="End_Print_Date"formControlName="End_Print_Date" type="text" class="form-control">
@@ -867,7 +867,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="End_Valid_Date">End_Valid_Date</label>
+              <label for="End_Valid_Date">歸檔審核日期</label>
               
               
                 <input [ngModel]="End_Valid_Date"formControlName="End_Valid_Date" type="text" class="form-control">
@@ -876,7 +876,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Agency_Id">Agency_Id</label>
+              <label for="Agency_Id">行政執行分屬代碼前2碼</label>
               
               
                 
@@ -1073,7 +1073,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Transfer_Agency_Id">Transfer_Agency_Id</label>
+              <label for="Transfer_Agency_Id">移送機關代號</label>
               
               
                 <input [ngModel]="Transfer_Agency_Id"formControlName="Transfer_Agency_Id" type="text" class="form-control">
@@ -1082,16 +1082,27 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="Transfer_Date">Transfer_Date</label>
+              <label for="Transfer_Date">移送日期</label>
               
               
                 <input [ngModel]="Transfer_Date"formControlName="Transfer_Date" type="text" class="form-control">
               
 
             </div>
+
+            <div class="form-group text-left">
+              <label for="Creator">建檔人</label>
+              
+              
+                
+                  <textarea [ngModel]="Creator" formControlName="Creator" class="form-control" rows="3"></textarea>
+                
+              
+
+            </div>
           
             <div class="form-group text-left">
-              <label for="End_File_Submiter">End_File_Submiter</label>
+              <label for="End_File_Submiter">歸檔人</label>
               
               
                 
@@ -1101,29 +1112,10 @@
 
             </div>
 
-            <div class="form-group text-left">
-              <label for="Creator">Creator</label>
-              
-              
-                
-                  <textarea [ngModel]="Creator" formControlName="Creator" class="form-control" rows="3"></textarea>
-                
-              
-
-            </div>
-            <div class="form-group text-left">
-              <label for="Creator">Creator</label>
-              
-              
-                
-                  <textarea [ngModel]="Creator" formControlName="Creator" class="form-control" rows="3"></textarea>
-                
-              
-
-            </div>
+            
           
             <div class="form-group text-left">
-              <label for="End_File_Printer">End_File_Printer</label>
+              <label for="End_File_Printer">歸檔列印人</label>
               
               
                 
@@ -1134,7 +1126,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="File_URL">File_URL</label>
+              <label for="File_URL">檔案暫存路徑</label>
               
               
                 <input [ngModel]="File_URL"formControlName="File_URL" type="text" class="form-control">
@@ -1143,7 +1135,7 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="End_File_URL">End_File_URL</label>
+              <label for="End_File_URL">歸檔檔案路徑</label>
               
               
                 <input [ngModel]="End_File_URL"formControlName="End_File_URL" type="text" class="form-control">
@@ -1155,8 +1147,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">送出</button>
         </div>
       </form>
     </div>
@@ -1202,7 +1194,7 @@
   
   <div class="row">
     <div class="col-md-9">
-        <h1 class="asset-title" id='assetName'>OfficialDocument</h1>
+        <h1 class="asset-title" id='assetName'>公文</h1>
     </div>
     <div class="col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">
@@ -1211,7 +1203,7 @@
                 <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
               </svg>
           </span>
-        Create Asset
+        建立資產
       </button>
     </div>
   </div>
@@ -1222,68 +1214,69 @@
         <thead class="thead">
           <tr class="thead-cols">
             
-                <th class="info">Issue_No</th>
+                <th class="info">發文字號</th>
             
-                <th class="info">Issue_Date</th>
+                <th class="info">發文日期</th>
             
-                <th class="info">Class_Type</th>
+                <th class="info">案件類別</th>
             
-                <th class="info">Send_Class_ID</th>
+                <th class="info">移送案號</th>
             
-                <th class="info">Duty_Name</th>
+                <th class="info">義務人姓名</th>
             
-                <th class="info">Duty_Birthday</th>
+                <th class="info">出生日期 （義務人）</th>
             
-                <th class="info">Duty_ZipCode</th>
+                <th class="info">戶籍郵遞區號（義務人）</th>
             
-                <th class="info">Duty_Addr</th>
+                <th class="info">戶籍地址（義務人）</th>
             
-                <th class="info">Legal_Case_ID</th>
+                <th class="info">案由代碼</th>
             
-                <th class="info">Pay_Amt</th>
+                <th class="info">應納金額</th>
             
-                <th class="info">Protect_Exit_Org</th>
+                <th class="info">保全措施（已限制出境）</th>
             
-                <th class="info">Protect_Punish_Org</th>
+                <th class="info">保全措施（已禁止處分）</th>
             
-                <th class="info">Protect_Guar_Org</th>
+                <th class="info">保全措施（已提供擔保）</th>
             
-                <th class="info">Protect_Sei_Org</th>
+                <th class="info">保全措施（已假扣押）</th>
             
-                <th class="info">Protect_Closed_Org</th>
+                <th class="info">保全措施（已勒令停業）</th>
             
-                <th class="info">Pay_Period_Due_Date</th>
+                <th class="info">繳納期間屆滿日</th>
             
-                <th class="info">Is_Punishment</th>
+                <th class="info">是否行政處分確定</th>
             
-                <th class="info">End_File_No</th>
+                <th class="info">歸檔檔號</th>
             
-                <th class="info">End_File_Date</th>
+                <th class="info">歸檔日期</th>
             
-                <th class="info">BatchNo</th>
+                <th class="info">歸檔批號-流水號</th>
             
-                <th class="info">BatchYear</th>
+                <th class="info">歸檔批號-年度</th>
             
-                <th class="info">End_Print_Date</th>
+                <th class="info">歸檔列印日期</th>
             
-                <th class="info">End_Valid_Date</th>
+                <th class="info">歸檔審核日期</th>
             
-                <th class="info">Agency_Id</th>
+                <th class="info">行政執行分屬代碼前2碼</th>
             
-                <th class="info">Transfer_Agency_Id</th>
+                <th class="info">移送機關代號</th>
             
-                <th class="info">Transfer_Date</th>
+                <th class="info">移送日期</th>
+
+                <th class="info">建檔人</th>
             
-                <th class="info">End_File_Submiter</th>
-                <th class="info">Creator</th>
+                <th class="info">歸檔人</th>
             
-                <th class="info">End_File_Printer</th>
+                <th class="info">歸檔列印人</th>
             
-                <th class="info">File_URL</th>
+                <th class="info">檔案暫存路徑</th>
             
-                <th class="info">End_File_URL</th>
+                <th class="info">歸檔檔案路徑</th>
             
-              <th class="info-actions">Actions</th>
+              <th class="info-actions">編輯選項</th>
           </tr>
         </thead>
         <tbody>
@@ -1342,8 +1335,8 @@
             
                 <td class="asset-properties">{{asset.Transfer_Date}}</td>
             
-                <td class="asset-properties">{{asset.End_File_Submiter}}</td>
                 <td class="asset-properties">{{asset.Creator}}</td>
+                <td class="asset-properties">{{asset.End_File_Submiter}}</td>
             
                 <td class="asset-properties">{{asset.End_File_Printer}}</td>
             
